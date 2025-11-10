@@ -1,0 +1,57 @@
+{
+  "generos": [
+    {
+      "nombre": "Electrónica",
+      "subgeneros": [
+        {
+          "nombre": "Synthwave",
+          "items": [
+            { "id": 1, "titulo": "Neon Nights", "artista": "VaporTrail", "precio": 1200, "etiquetas": ["retro","sintético"], "descripcion": "Viaje synth retro de 8 tracks." },
+            { "id": 2, "titulo": "Pulse City", "artista": "Arcadian", "precio": 1500, "etiquetas": ["instrumental","no-vocal"], "descripcion": "Paisajes sonoros urbanos y nocturnos." }
+          ]
+        },
+        {
+          "nombre": "Chillout",
+          "items": [
+            { "id": 3, "titulo": "Cloud Lounge", "artista": "Sura", "precio": 900, "etiquetas": ["relajado","lounge"], "descripcion": "Temas suaves para concentrarte." }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Indie",
+      "subgeneros": [
+        {
+          "nombre": "Indie Rock",
+          "items": [
+            { "id": 4, "titulo": "Back Alley Days", "artista": "The Low Keys", "precio": 1300, "etiquetas": ["guitarra","vocal"], "descripcion": "Riffs cálidos y letras nostálgicas." },
+            { "id": 5, "titulo": "Sunset Drive", "artista": "Paper Road", "precio": 1100, "etiquetas": ["melódico","español"], "descripcion": "Pop-rock melódico para tardes." }
+          ]
+        },
+        {
+          "nombre": "Indie Pop",
+          "items": [
+            { "id": 6, "titulo": "Candy Static", "artista": "Lilac Club", "precio": 1000, "etiquetas": ["pegajoso","sintético"], "descripcion": "Ganchos pop y producción brillante." }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Hip-Hop",
+      "subgeneros": [
+        {
+          "nombre": "Lo-Fi",
+          "items": [
+            { "id": 7, "titulo": "Study Beats Vol.1", "artista": "MonoBeat", "precio": 700, "etiquetas": ["instrumental","ambient"], "descripcion": "Loops hipnóticos ideales para estudiar." }
+          ]
+        },
+        {
+          "nombre": "Conscious Rap",
+          "items": [
+            { "id": 8, "titulo": "Street Philosophy", "artista": "Kairo", "precio": 1400, "etiquetas": ["letra","urbano"], "descripcion": "Rimas con contenido y mensaje social." }
+          ]
+        }
+      ]
+    }
+  ]
+}

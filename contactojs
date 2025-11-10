@@ -1,0 +1,37 @@
+const form = document.getElementById("form-contacto");
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+
+  const nombre = document.getElementById("nombre").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const asunto = document.getElementById("asunto").value.trim();
+  const mensaje = document.getElementById("mensaje").value.trim();
+
+  if (!nombre || !email || !asunto || !mensaje) {
+    mostrarAlerta("Por favor completa todos los campos.", false);
+    return;
+  }
+
+  // Simulación de envío (puedes conectar con EmailJS o backend real)
+  form.reset();
+  mostrarAlerta("¡Tu mensaje fue enviado exitosamente! 🎶", true);
+});
+
+function mostrarAlerta(texto, exito = true) {
+  const alerta = document.createElement("div");
+  alerta.textContent = texto;
+  alerta.style.position = "fixed";
+  alerta.style.bottom = "20px";
+  alerta.style.right = "20px";
+  alerta.style.background = exito ? "#10B981" : "#EF4444";
+  alerta.style.color = "white";
+  alerta.style.padding = "12px 18px";
+  alerta.style.borderRadius = "8px";
+  alerta.style.fontWeight = "600";
+  alerta.style.zIndex = "9999";
+  alerta.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+  document.body.appendChild(alerta);
+
+  setTimeout(() => alerta.remove(), 3000);
+}

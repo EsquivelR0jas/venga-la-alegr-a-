@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "titulo": "Neon Night Beat",
+    "artista": "VaporTrail",
+    "descripcion": "Beat synthwave con estética retro futurista, ideal para vídeos o podcasts.",
+    "etiquetas": ["Synthwave", "Retro", "Electrónica"],
+    "precio": 1500,
+    "imagen": "img/album1.jpg",
+    "audio": "audio/neon-night.mp3"
+  },
+  {
+    "id": 2,
+    "titulo": "Lo-Fi Dreams",
+    "artista": "Sura",
+    "descripcion": "Composición tranquila y cálida, perfecta para estudio o relajación.",
+    "etiquetas": ["Lo-Fi", "Relax", "Indie"],
+    "precio": 1200,
+    "imagen": "img/album2.jpg",
+    "audio": "audio/lofi-dreams.mp3"
+  },
+  {
+    "id": 3,
+    "titulo": "Urban Vibes",
+    "artista": "Rayo",
+    "descripcion": "Beat trap con influencia urbana y percusión intensa.",
+    "etiquetas": ["Trap", "Urbano", "Bass"],
+    "precio": 1600,
+    "imagen": "img/album3.jpg",
+    "audio": "audio/urban-vibes.mp3"
+  },
+  {
+    "id": 4,
+    "titulo": "Golden Hour",
+    "artista": "AetherSky",
+    "descripcion": "Sonidos ambientales con texturas cálidas que evocan el atardecer perfecto.",
+    "etiquetas": ["Ambient", "Cinematic", "Instrumental"],
+    "precio": 1350,
+    "imagen": "img/album4.jpg",
+    "audio": "audio/golden-hour.mp3"
+  }
+]
