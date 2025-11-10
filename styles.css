@@ -1,0 +1,362 @@
+/* === VARIABLES GENERALES === */
+:root {
+  --clr-bg: #0f0f0f;
+  --clr-text: #ffffff;
+  --clr-accent: #EC4899;
+  --clr-accent-hover: #f472b6;
+  --clr-muted: #aaaaaa;
+  --radius: 12px;
+  --ff-title: 'Poppins', sans-serif;
+  --ff-body: 'Inter', sans-serif;
+}
+
+/* === BASE === */
+body {
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  font-family: var(--ff-body);
+  margin: 0;
+  padding: 0;
+}
+
+a,
+.brand a {
+  color: var(--clr-text);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+a:hover {
+  color: var(--clr-accent);
+}
+
+.muted {
+  color: var(--clr-muted);
+  font-size: 0.95rem;
+}
+
+/* === CONTENEDORES === */
+.item .title {
+  font-weight: 600;
+  font-family: var(--ff-title);
+}
+
+.item .tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 999px;
+  background: rgba(236, 72, 153, 0.12);
+  color: var(--clr-accent);
+  border: 1px solid rgba(236, 72, 153, 0.08);
+}
+
+/* === PANEL / TARJETAS === */
+.panel h2 {
+  font-family: var(--ff-title);
+  margin-top: 0;
+}
+
+.card h3 {
+  margin: 0.25rem 0;
+}
+
+.card p {
+  margin: 0.5rem 0;
+}
+
+/* === TREE (Estructuras de menú colapsable) === */
+.tree-wrap {
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.tree button:focus {
+  outline: 2px dashed rgba(236, 72, 153, 0.25);
+  outline-offset: 3px;
+}
+
+.toggle-icon {
+  display: inline-block;
+  transition: transform 0.18s ease;
+}
+
+[aria-expanded="true"] .toggle-icon {
+  transform: rotate(90deg);
+}
+
+:focus {
+  outline-offset: 3px;
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: var(--clr-text);
+  background: linear-gradient(-45deg, #EC4899, #7540a7, #334581, #10B981);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  padding: 3rem 1rem;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+#typed-text {
+  font-family: var(--ff-title);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+}
+
+#cursor {
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* === BOTONES === */
+.btn-primary {
+  display: inline-block;
+  background: var(--clr-accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: var(--clr-accent-hover);
+}
+
+/* === EXPLORA POR GÉNERO === */
+.genres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.genre-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 4px solid var(--clr-accent);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.genre-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-6px);
+}
+
+.genre-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+/* === INFO / BENEFICIOS === */
+.info-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 1.25rem;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, background 0.2s;
+}
+
+.info-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-4px);
+}
+
+/* === ARTISTAS DESTACADOS === */
+.artistas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.artista-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artista-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px rgba(236, 72, 153, 0.3);
+}
+
+.artista-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  opacity: 0.95;
+  transition: opacity 0.3s;
+}
+
+.artista-card:hover .artista-img {
+  opacity: 1;
+}
+
+/* === MISIÓN === */
+.mision p {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  text-align: justify;
+}
+
+/* === COMUNIDAD / TESTIMONIOS === */
+.testimonios-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 1rem;
+}
+
+.testimonio {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid var(--clr-accent);
+  padding: 1rem;
+  border-radius: var(--radius);
+  font-style: italic;
+  position: relative;
+}
+
+.testimonio::before {
+  content: "“";
+  font-size: 3rem;
+  color: var(--clr-accent);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  opacity: 0.2;
+}
+
+.testimonio footer {
+  margin-top: 0.5rem;
+  text-align: right;
+  font-style: normal;
+  color: var(--clr-muted);
+}
+
+/* === REPRODUCTOR DE MÚSICA === */
+.reproductor {
+  text-align: center;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.player-cover {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.player-cover.playing {
+  transform: rotate(3deg) scale(1.05);
+}
+
+.player-info h3 {
+  font-family: var(--ff-title);
+  margin: 0;
+}
+
+.player-controls button {
+  background: var(--clr-accent);
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 0.5rem 0.9rem;
+  margin: 0.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.player-controls button:hover {
+  background: var(--clr-accent-hover);
+  transform: scale(1.1);
+}
+
+/* === NEWSLETTER === */
+form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+form input[type="email"] {
+  padding: 0.5rem 0.75rem;
+  border-radius: 50px;
+  border: 1px solid #444;
+  background: #1a1a1a;
+  color: #fff;
+  flex: 1;
+  min-width: 200px;
+}
+
+form button {
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: none;
+  background: var(--clr-accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--clr-accent-hover);
+}

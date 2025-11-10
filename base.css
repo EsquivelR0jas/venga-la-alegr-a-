@@ -1,0 +1,156 @@
+:root{
+  /* Paleta BeatSpace */
+  --clr-bg: #0F172A;      /* fondo */
+  --clr-surface: #111827;
+  --clr-text: #E2E8F0;    /* texto */
+  --clr-primary: #3B82F6; /* azul eléctrico */
+  --clr-secondary: #1E1B4B;/* morado oscuro */
+  --clr-accent: #EC4899;  /* fucsia */
+  --clr-muted: #9CA3AF;
+
+  /* Tipografías */
+  --ff-title: "Poppins", system-ui, sans-serif;
+  --ff-text: "Inter", system-ui, sans-serif;
+
+  /* Espaciado / layout */
+  --container-max: 1100px;
+  --radius: 12px;
+  --focus: 3px;
+}
+
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,var(--clr-bg), #071028 120%);
+  color:var(--clr-text);
+  font-family:var(--ff-text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+  font-size:16px;
+}
+
+/* Utility */
+.container{
+  width:clamp(320px,92%, var(--container-max));
+  margin:0 auto;
+  padding:1rem;
+}
+
+/* Accessibility helpers */
+.sr-only{
+  position:absolute !important;
+  height:1px; width:1px;
+  overflow:hidden; clip:rect(1px,1px,1px,1px);
+  white-space:nowrap;
+}
+
+/* Header */
+.site-header{
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter: blur(6px);
+}
+.header-inner{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  justify-content:space-between;
+  padding:.75rem 0;
+}
+.brand a{color:var(--clr-text); text-decoration:none; font-family:var(--ff-title); font-weight:800; font-size:1.25rem}
+.nav-list{display:flex; gap:1rem; list-style:none; margin:0; padding:0}
+.nav-list a{color:var(--clr-text); text-decoration:none; font-weight:600}
+.nav-list a:focus, .nav-list a:hover{outline: none; color:var(--clr-primary)}
+
+/* Menu toggle (mobile) */
+.menu-toggle{
+  display:none;
+  background:none;
+  border:0;
+  color:var(--clr-text);
+  font-size:1.25rem;
+}
+
+/* Hero */
+.hero{
+  padding:2rem 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.hero-title{font-family:var(--ff-title); font-size:clamp(1.5rem, 3.5vw, 2.4rem); margin:0 0 .5rem}
+.hero-sub{color:var(--clr-muted); margin:0}
+
+/* Panels */
+.panel{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); padding:1rem; border-radius:var(--radius); margin:1rem 0; box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+.controls{display:flex; gap:.5rem; align-items:center; margin-bottom:.75rem}
+.controls input, .controls select{
+  padding:.5rem .75rem;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.05);
+  background:rgba(255,255,255,0.02);
+  color:var(--clr-text);
+  outline:none;
+}
+.controls input:focus, .controls select:focus{
+  box-shadow:0 0 0 var(--focus) inset rgba(59,130,246,0.12);
+  border-color:var(--clr-primary);
+}
+
+/* Lista del catálogo */
+.lista{list-style:none; padding:0; margin:0; display:grid; gap:.75rem}
+.item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:.75rem;
+  border-radius:10px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+  cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease;
+  outline:none;
+}
+.item:focus{box-shadow:0 0 0 3px rgba(236,72,153,0.12)}
+.item:hover{transform:translateY(-3px)}
+.item .meta{font-size:.9rem; color:var(--clr-muted)}
+
+/* Card detalle */
+.card{padding:1rem; border-radius:10px}
+.hidden{display:none}
+
+/* Tree */
+.tree{list-style:none; padding-left:0; margin:0}
+.tree li{padding:.25rem 0; display:flex; align-items:center; gap:.5rem}
+.tree button{
+  background:none;border:0;color:var(--clr-text);cursor:pointer;font-size:0.9rem;
+}
+[role="treeitem"][aria-expanded="true"] > ul{display:block}
+[role="treeitem"][aria-expanded="false"] > ul{display:none}
+
+/* Footer */
+.site-footer{padding:1rem 0; color:var(--clr-muted); border-top:1px solid rgba(255,255,255,0.03); margin-top:2rem}
+.footer-nav{list-style:none;padding:0;display:flex;gap:.5rem;margin:0}
+
+/* Animaciones */
+.fade-in{opacity:0; transform:translateY(12px); animation:fade .5s ease forwards}
+@keyframes fade{to{opacity:1; transform:none}}
+
+/* Responsive */
+@media (max-width:767px){
+  .nav-list{display:none}
+  .menu-toggle{display:inline-block}
+  .controls{flex-direction:column; align-items:stretch}
+  .lista{grid-template-columns:1fr}
+}
+@media (min-width:768px){
+  .lista{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:1100px){
+  .lista{grid-template-columns:repeat(3,1fr)}
+}
