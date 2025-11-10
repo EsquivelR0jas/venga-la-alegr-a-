@@ -1,0 +1,25 @@
+📂 Catálogo de Productos
+ │
+ ├── 🍲 **Categoría: Gastronomía Guanacasteca**
+ │   │
+ │   ├── 🌽 **Subcategoría: De la Milpa y el Horno**
+ │   │   ├── 🥨 Ítem: Rosquillas y Tanelas de Nicoya
+ │   │   ├── 🌾 Ítem: Harina de Maíz Pujagua
+ │   │   └── 🍬 Ítem: Tapa de Dulce Orgánica
+ │   │
+ │   └── 🍯 **Subcategoría: Conservas y Sabores Locales**
+ │       ├── 🌶️ Ítem: Chilera Casera Guanacasteca
+ │       ├── 🥭 Ítem: Mermelada de Mango de la pampa
+ │       └── ☕ Ítem: Café de las alturas de Tilarán
+ │
+ └── 🎨 **Categoría: Artesanía y Cultura**
+     │
+     ├──🏺 **Subcategoría: Cerámica de Guaitil**
+     │   ├── 🏺 Ítem: Vasija Chorotega pintada a mano
+     │   ├── 🎶 Ítem: Ocarina de barro
+     │   └── 🍽️ Ítem: Juego de platos decorativos
+     │
+     └── 🤠 **Subcategoría: Del Cuero y la Madera**
+         ├── 🔑 Ítem: Llavero de cuero grabado
+         ├── 🔪 Ítem: Tabla de cocina de madera de Teca
+         └── 🐴 Ítem: Sandalias de cuero estilo "caite"

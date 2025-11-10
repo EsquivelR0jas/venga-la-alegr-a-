@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BeatSpace — Música independiente</title>
+  <meta name="description" content="BeatSpace — Descubre artistas y álbumes independientes por géneros.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <h1 class="brand"><a href="#inicio">BeatSpace</a></h1>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="Catalogo.html">Catálogo</a></li>
+          <li><a href="contactenos.html">Contactenos</a></li>
+          <li><a href="acercade.html">Acerca</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
+    </div>
+  </header>
+ <!-- === HERO PRINCIPAL === -->
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="hero-inner fade-in">
+    <h2 id="hero-title" class="hero-title">
+      BeatSpace: donde la música independiente encuentra su espacio.
+    </h2>
+    <p class="hero-sub">
+      Descubre nuevos artistas, géneros emergentes y álbumes únicos creados por talentos independientes de todo el mundo.
+    </p>
+    <a href="#catalogo" class="btn-primary">Explorar catálogo</a>
+  </div>
+</section>
+<!-- === EXPLORA POR GÉNERO === -->
+<section class="explora panel" id="explora" aria-labelledby="explora-title">
+  <h2 id="explora-title">Explora por género</h2>
+  <div class="genres-grid">
+    <article class="genre-card fade-in" style="--clr:#3B82F6;">
+      <img src="img/icons8-electronic-music-80.png" alt="Ícono de electrónica" class="genre-icon">
+      <h3>Electrónica</h3>
+      <p>Beats, sintetizadores y atmósferas digitales que marcan tendencia.</p>
+    </article>
+    <article class="genre-card fade-in" style="--clr:#EC4899;">
+      <img src="img/icons8-guitar-80 (1).png" alt="Ícono de indie" class="genre-icon">
+      <h3>Indie</h3>
+      <p>Sonidos auténticos y letras sinceras. Descubre bandas con alma propia.</p>
+    </article>
+    <article class="genre-card fade-in" style="--clr:#F59E0B;">
+      <img src="img/icons8-headphones-64.png" alt="Ícono de hip-hop" class="genre-icon">
+      <h3>Hip-Hop</h3>
+      <p>Flow, estilo y mensaje: la voz de las calles y la cultura urbana.</p>
+    </article>
+  </div>
+</section>
+
+<!-- === SECCIÓN INFO === -->
+<section class="panel" id="info" aria-labelledby="info-title">
+  <h2 id="info-title">¿Por qué elegir BeatSpace?</h2>
+  <div class="info-grid">
+    <article class="info-card fade-in">
+      <h3>🌍 Comunidad Global</h3>
+      <p>BeatSpace conecta artistas de todo el mundo, promoviendo la diversidad musical y cultural.</p>
+    </article>
+    <article class="info-card fade-in">
+      <h3>💡 Innovación</h3>
+      <p>Una interfaz moderna, accesible y adaptable para disfrutar la música sin límites.</p>
+    </article>
+    <article class="info-card fade-in">
+      <h3>🎧 Experiencia Personal</h3>
+      <p>Filtra, explora y guarda tus favoritos. La música que amas, al alcance de un clic.</p>
+    </article>
+  </div>
+</section>
+<!-- === DESCUBRE ARTISTAS DESTACADOS === -->
+<section class="panel" id="artistas" aria-labelledby="artistas-title">
+  <h2 id="artistas-title">Artistas destacados</h2>
+  <div class="artistas-grid">
+    <article class="artista-card fade-in">
+      <img src="img/vaportrail.jpg" alt="VaporTrail artista synthwave" class="artista-img">
+      <h3>VaporTrail</h3>
+      <p>Synthwave y estética retro futurista desde 2018.  
+      Conocido por su álbum <em>Neon Nights</em>.</p>
+    </article>
+
+    <article class="artista-card fade-in">
+      <img src="img/sura.jpg" alt="Sura artista chillout" class="artista-img">
+      <h3>Sura</h3>
+      <p>Compositora electrónica enfocada en ambient y chillout.  
+      Mezcla sonido natural con texturas digitales.</p>
+    </article>
+
+    <article class="artista-card fade-in">
+      <img src="img/kairo.jpg" alt="Kairo rapero consciente" class="artista-img">
+      <h3>Kairo</h3>
+      <p>Rapero independiente de Costa Rica.  
+      Su obra <em>Street Philosophy</em> combina lírica social y beats lo-fi.</p>
+    </article>
+  </div>
+</section>
+<!-- === REPRODUCTOR DE MÚSICA === -->
+<section class="panel reproductor" id="reproductor" aria-labelledby="reproductor-title">
+  <h2 id="reproductor-title">Escucha ahora</h2>
+
+  <div class="player fade-in">
+    <img src="img/album1.jpg" alt="Portada del álbum Neon Nights" class="player-cover">
+    <div class="player-info">
+      <h3 id="player-title">Neon Nights</h3>
+      <p id="player-artist">VaporTrail</p>
+        <audio id="audio-sample" controls>
+      <source src="audio/neon-nights.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
+    </div>
+  </div>
+
+  <audio id="audio" src="audio/neon-nights.mp3" preload="metadata"></audio>
+</section>
+
+<!-- === COMUNIDAD Y TESTIMONIOS === -->
+<section class="panel comunidad" id="comunidad" aria-labelledby="comunidad-title">
+  <h2 id="comunidad-title">Lo que dice nuestra comunidad</h2>
+  <div class="testimonios-grid">
+    <blockquote class="testimonio fade-in">
+      <p>“BeatSpace me ayudó a encontrar bandas que nunca habría conocido. Es mi nuevo espacio musical.”</p>
+      <footer>— <cite>Alex G.</cite>, oyente habitual</footer>
+    </blockquote>
+    <blockquote class="testimonio fade-in">
+      <p>“Gracias a BeatSpace, mi música llegó a más personas en Latinoamérica. ¡Una plataforma increíble!”</p>
+      <footer>— <cite>Kairo</cite>, artista independiente</footer>
+    </blockquote>
+    <blockquote class="testimonio fade-in">
+      <p>“Me encanta su diseño: simple, rápido y con estilo. Perfecto para descubrir algo nuevo cada día.”</p>
+      <footer>— <cite>Sofía L.</cite>, fan de indie pop</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="panel" id="newsletter" aria-labelledby="newsletter-title">
+  <h2 id="newsletter-title">Únete a BeatSpace</h2>
+  <p class="muted">Recibe actualizaciones de artistas y lanzamientos exclusivos.</p>
+  <form id="form-newsletter" class="fade-in">
+    <input type="email" placeholder="Tu correo electrónico" required>
+    <button type="submit" class="btn-primary">Suscribirse</button>
+  </form>
+</section>
+
+
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <small>© 2025 BeatSpace — Proyecto educativo</small>
+      <nav aria-label="Enlaces secundarios">
+        <ul class="footer-nav">
+          <li><a href="#acerca de nosotros">Acerca de Nosotros</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/tree.js" ></script>
+  <script src="js/app.js" ></script>
+
+
+
+</body>
+</html>

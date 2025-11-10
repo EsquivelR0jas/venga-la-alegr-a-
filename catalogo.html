@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es">
+<head>
+      <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BeatSpace — Música independiente</title>
+  <meta name="description" content="BeatSpace — Descubre artistas y álbumes independientes por géneros.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/catalogo.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <h1 class="brand"><a href="#inicio">BeatSpace</a></h1>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="Catalogo.html">Catálogo</a></li>
+          <li><a href="contactenos.html">Contactenos</a></li>
+          <li><a href="acercade.html">Acerca</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
+    </div>
+  </header>
+
+  <header>
+    <h1>🎵 Catálogo BeatSpace</h1>
+    <input type="text" id="buscador" placeholder="Buscar por título, artista o género...">
+    <button id="ver-carrito">🛒 Carrito (<span id="contador-carrito">0</span>)</button>
+  </header>
+
+  <main id="catalogo"></main>
+
+  <!-- Modal del carrito -->
+   <main>
+  <div id="carrito-modal" class="oculto">
+    <div class="carrito-contenedor">
+      <h2>Tu carrito</h2>
+      <div id="items-carrito"></div>
+      <p id="total-carrito">Total: ₡0</p>
+      <button id="cerrar-carrito">Cerrar</button>
+      <button id="comprar-todo">Finalizar compra</button>
+    </div>
+  </div>
+ </main>
+
+  <main class="catalogo-container">
+    <!-- Producto 1 -->
+    <div class="producto fade-in">
+      <img src="img/album1.jpg" alt="Neon Night Beat">
+      <div class="info">
+        <h2>Neon Night Beat</h2>
+        <p class="artista">VaporTrail</p>
+        <p class="descripcion">Beat synthwave con estética retro futurista, ideal para vídeos o podcasts.</p>
+        <div class="tags">
+          <span class="tag">Synthwave</span>
+          <span class="tag">Retro</span>
+          <span class="tag">Electrónica</span>
+        </div>
+        <p class="precio">₡1500</p>
+        <audio controls src="audio/neon-nights.mp3"></audio>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+    </div>
+
+
+    <!-- Producto 2 -->
+    <div class="producto fade-in">
+      <img src="img/album2.jpg" alt="Lo-Fi Dreams">
+      <div class="info">
+        <h2>Lo-Fi Dreams</h2>
+        <p class="artista">Sura</p>
+        <p class="descripcion">Composición tranquila y cálida, perfecta para estudio o relajación.</p>
+        <div class="tags">
+          <span class="tag">Lo-Fi</span>
+          <span class="tag">Relax</span>
+          <span class="tag">Indie</span>
+        </div>
+        <p class="precio">₡1200</p>
+        <audio controls src="audio/lofi-dreams.mp3"></audio>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="producto fade-in">
+      <img src="img/album3.jpg" alt="Street Philosophy">
+      <div class="info">
+        <h2>Street Philosophy</h2>
+        <p class="artista">Kairo</p>
+        <p class="descripcion">Rap social con beats lo-fi y mensajes profundos sobre la vida urbana.</p>
+        <div class="tags">
+          <span class="tag">Hip-Hop</span>
+          <span class="tag">Urbano</span>
+          <span class="tag">Lo-Fi</span>
+        </div>
+        <p class="precio">₡1800</p>
+        <audio controls src="audio/street-philosophy.mp3"></audio>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="producto fade-in">
+      <img src="IMG/album4.jpg" alt="Sunset Chill">
+      <div class="info">
+        <h2>Sunset Chill</h2>
+        <p class="artista">Sora</p>
+        <p class="descripcion">Paisajes sonoros relajantes con toques electrónicos suaves.</p>
+        <div class="tags">
+          <span class="tag">Ambient</span>
+          <span class="tag">Chill</span>
+          <span class="tag">Relax</span>
+        </div>
+        <p class="precio">₡1300</p>
+        <audio controls src="audio/sunset-chill.mp3"></audio>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+    </div>
+
+    <!-- Producto 5 -->
+    <div class="producto fade-in">
+      <img src="img/album5.jpg" alt="Urban Vibes">
+      <div class="info">
+        <h2>Urban Vibes</h2>
+        <p class="artista">Rayo</p>
+        <p class="descripcion">Beat trap con influencia urbana y percusión intensa.</p>
+        <div class="tags">
+          <span class="tag">Trap</span>
+          <span class="tag">Urbano</span>
+          <span class="tag">Bass</span>
+        </div>
+        <p class="precio">₡1600</p>
+        <audio controls src="audio/urban-vibes.mp3"></audio>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+    </div>
+
+    <!-- Producto 6 -->
+    <div class="producto fade-in">
+      <img src="img/album6.jpg" alt="Moonlight Jazz">
+      <div class="info">
+        <h2>Moonlight Jazz</h2>
+        <p class="artista">BlueSoul</p>
+        <p class="descripcion">Jazz moderno con piano suave y percusión minimalista.</p>
+        <div class="tags">
+          <span class="tag">Jazz</span>
+          <span class="tag">Soul</span>
+          <span class="tag">Instrumental</span>
+        </div>
+        <p class="precio">₡1400</p>
+        <audio controls src="audio/moonlight-jazz.mp3"></audio>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+    </div>
+
+<!-- Producto 7 -->
+<div class="producto fade-in">
+  <img src="img/album7.jpg" alt="Digital Dreamscape">
+  <div class="info">
+    <h2>Digital Dreamscape</h2>
+    <p class="artista">NovaTone</p>
+    <p class="descripcion">Un viaje sonoro a través de pads envolventes y ritmos vaporwave hipnóticos.</p>
+    <div class="tags">
+      <span class="tag">Vaporwave</span>
+      <span class="tag">Electrónica</span>
+      <span class="tag">Experimental</span>
+    </div>
+    <p class="precio">₡1700</p>
+    <audio controls src="audio/digital-dreamscape.mp3"></audio>
+    <button class="btn-comprar">Comprar</button>
+  </div>
+</div>
+
+<!-- Producto 8 -->
+<div class="producto fade-in">
+  <img src="img/album8.jpg" alt="Afterglow">
+  <div class="info">
+    <h2>Afterglow</h2>
+    <p class="artista">Luna Keys</p>
+    <p class="descripcion">Melodías suaves de piano mezcladas con lo-fi beats para noches tranquilas.</p>
+    <div class="tags">
+      <span class="tag">Lo-Fi</span>
+      <span class="tag">Piano</span>
+      <span class="tag">Chill</span>
+    </div>
+    <p class="precio">₡1250</p>
+    <audio controls src="audio/afterglow.mp3"></audio>
+    <button class="btn-comprar">Comprar</button>
+  </div>
+</div>
+
+<!-- Producto 9 -->
+<div class="producto fade-in">
+  <img src="img/album9.jpg" alt="Future Bounce">
+  <div class="info">
+    <h2>Future Bounce</h2>
+    <p class="artista">EchoFrame</p>
+    <p class="descripcion">Un beat energético y moderno con bajos contundentes y drops brillantes.</p>
+    <div class="tags">
+      <span class="tag">EDM</span>
+      <span class="tag">Bounce</span>
+      <span class="tag">Electro</span>
+    </div>
+    <p class="precio">₡1900</p>
+    <audio controls src="audio/future-bounce.mp3"></audio>
+    <button class="btn-comprar">Comprar</button>
+  </div>
+</div>
+
+<!-- Producto 10 -->
+<div class="producto fade-in">
+  <img src="img/album10.jpg" alt="Golden Hour">
+  <div class="info">
+    <h2>Golden Hour</h2>
+    <p class="artista">AetherSky</p>
+    <p class="descripcion">Sonidos ambientales con texturas cálidas que evocan el atardecer perfecto.</p>
+    <div class="tags">
+      <span class="tag">Ambient</span>
+      <span class="tag">Cinematic</span>
+      <span class="tag">Instrumental</span>
+    </div>
+    <p class="precio">₡1350</p>
+    <audio controls src="audio/golden-hour.mp3"></audio>
+    <button class="btn-comprar">Comprar</button>
+  </div>
+</div>
+
+
+  </main>
+
+  <footer>
+    <p>© 2025 BeatSpace — Todos los derechos reservados</p>
+  </footer>
+ 
+
+  <script src="js/catalogo.js"></script>
+</body>
+</html>
+
+  </head>
+</html>

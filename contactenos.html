@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contáctenos | BeatSpace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+  <header>
+    <h1>📨 Contáctanos</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="acercade.html">Acerca</a>
+      <a href="contacto.html" class="activo">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>¿Tienes alguna pregunta o colaboración?</h2>
+      <p>En <strong>BeatSpace</strong> estamos listos para escucharte. Escríbenos si deseas colaborar, publicar tu música, o simplemente dejar tus comentarios. ¡Nos encanta conectar con la comunidad!</p>
+    </section>
+
+    <section class="formulario">
+      <form id="form-contacto">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+
+        <label for="asunto">Asunto</label>
+        <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar mensaje 🚀</button>
+      </form>
+
+      <div class="info-contacto">
+        <h3>O encuéntranos en:</h3>
+        <ul>
+          <li>📧 <strong>Email:</strong> contacto@beatspace.com</li>
+          <li>📍 <strong>Ubicación:</strong> San José, Costa Rica</li>
+          <li>🌐 <strong>Instagram:</strong> <a href="#">@beatspace</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 BeatSpace — Conectando artistas y oyentes</p>
+  </footer>
+
+  <script src="js/contacto.js"></script>
+</body>
+</html>
